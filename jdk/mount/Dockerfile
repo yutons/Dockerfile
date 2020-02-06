@@ -15,6 +15,7 @@ ADD localtime /etc/
 RUN echo "Asia/Shanghai" > /etc/timezone
 
 #******************设置JAVA变量环境******************
+RUN mkdir /usr && cd /usr && mkdir local && cd local && mkdir jdk
 ENV JAVA_HOME=/usr/local/jdk
 ENV CLASSPATH=$JAVA_HOME/bin
 ENV PATH=$PATH:$JAVA_HOME/bin
