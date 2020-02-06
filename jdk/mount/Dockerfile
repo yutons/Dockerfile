@@ -14,8 +14,8 @@ RUN set -xe && apk --no-cache add ttf-dejavu fontconfig
 ADD localtime /etc/
 RUN echo "Asia/Shanghai" > /etc/timezone
 
+VOLUME /usr/local/jdk
 #******************设置JAVA变量环境******************
-RUN cd /usr/local && mkdir jdk
 ENV JAVA_HOME=/usr/local/jdk
 ENV CLASSPATH=$JAVA_HOME/bin
 ENV PATH=$PATH:$JAVA_HOME/bin
