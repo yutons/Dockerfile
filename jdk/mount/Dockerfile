@@ -16,7 +16,7 @@ RUN echo "Asia/Shanghai" > /etc/timezone
 
 VOLUME /usr/local/jdk
 #******************设置JAVA变量环境******************
-#ENV JAVA_HOME=/usr/local/jdk
-#ENV CLASSPATH=$JAVA_HOME/bin
-#ENV PATH=$PATH:$JAVA_HOME/bin
-#CMD ["java","-version"]
+ENV JAVA_HOME=/usr/local/jdk
+ENV CLASSPATH=$JAVA_HOME/bin
+ENV PATH=$PATH:$JAVA_HOME/bin
+CMD ["java","-version"]
